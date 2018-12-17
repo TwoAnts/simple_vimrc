@@ -24,6 +24,8 @@ set smartcase       " no ignorecase if Uppercase char present
 "set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 "set laststatus=2   " Always show the status line - use 2 lines for the status bar
 
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+
 autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
 function! AutoSetFileHead()
     " .sh
